@@ -1,0 +1,81 @@
+.btn {
+  display: inline-block;
+  width: 14.75rem;
+  height: 4rem;
+  color: #212121;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 1.5rem; //12px
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+.btn-ripple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.btn-small {
+  width: 9.75rem;
+  height: 2.75rem;
+  font-size: 1.25rem //10px
+}
+
+.btn-shadow {
+  box-shadow: 0px 4px 0px;
+}
+
+.btn-green {
+  background-color: #4EB7A8;
+  color: #fff;
+  border-color: #4EB7A8;
+}
+
+.btn-shadow-green {
+  box-shadow: 0px 4px 0px #28A290;
+}
+
+.btn-outline-green {
+  background-color: initial;
+  border-color: #4EB7A8;
+  color: #4EB7A8;
+}
+
+.btn-orange {
+  background-color: #E75735;
+  color: #fff;
+  border-color: #E75735;
+}
+
+.btn-shadow-orange {
+  box-shadow: 0px 4px 0px #BF3E1F;
+}
+
+.btn-outline-orange {
+  background-color: initial;
+  border-color: #E75735;
+  color: #E75735;
+}
+
+.ripple {
+  display: block;
+  position: absolute;
+	background: hsl(180, 40%, 80%);
+	border-radius: 100%;
+	transform: scale(0);
+}
+/*animation effect*/
+.ripple.animate {animation: ripple 0.65s linear;}
+@keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(2.5);}
+}
