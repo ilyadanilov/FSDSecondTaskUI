@@ -1,0 +1,58 @@
+.arrow-btn {
+  display: block;
+  width: 6.25rem; //50px
+  height: 6.25rem; //50px
+  color: #212121;
+  background-color: transparent;
+  border: 3px solid #212121;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  &:active {
+    background-color: #212121;
+    i {
+      border-color: #fff;
+    }
+  }
+
+  i {
+    border: solid;
+    border-color: inherit;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%) rotate(135deg);
+    }
+  &_right {
+    i {
+        transform: translate(-65%, -50%) rotate(-45deg);
+      }
+  }
+  &_green {
+    border-color: #4EB7A8;
+    &:active {
+      background-color: #4EB7A8;
+    }
+  }
+  &_filled {
+    border-color: #E5E5E5;
+    background-color: #E5E5E5;
+    &:active {
+      background-color: #fff;
+      i {
+        border-color: inherit;
+      }
+    }
+    i {
+      border-color: #fff;
+    }
+  }
+  &_filled_green {
+    border-color: #4EB7A8;
+    background-color: #4EB7A8;
+  }
+  }
