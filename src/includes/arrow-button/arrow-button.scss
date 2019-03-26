@@ -1,10 +1,10 @@
 .arrow-btn {
   display: block;
-  width: 6.25rem; //50px
-  height: 6.25rem; //50px
+  width: 6rem; //50px
+  height: 6rem; //50px
   color: #212121;
   background-color: transparent;
-  border: 3px solid #212121;
+  border: .5rem solid #212121;
   border-radius: 50%;
   cursor: pointer;
   user-select: none;
@@ -19,9 +19,9 @@
   i {
     border: solid;
     border-color: inherit;
-    border-width: 0 3px 3px 0;
+    border-width: 0 .5rem .5rem 0;
     display: inline-block;
-    padding: 7px;
+    padding: 1rem;
     position: absolute;
     top: 50%;
     left: 50%;
