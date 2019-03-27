@@ -11,10 +11,11 @@ html(lang="en")
   body
     main.main
       .main__container
-      +heading('standart buttons')
+        +heading('standart buttons')
         include ./includes/button/button.pug
       .main__container
         +heading('arrow buttons')
         include ./includes/arrow-button/arrow-button.pug
       .main__container
-        include ./includes/button/button.pug
+        +heading('percentages/pie-charts')
+        include ./includes/pie-chart/pie-chart.pug

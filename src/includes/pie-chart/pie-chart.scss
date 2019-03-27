@@ -1,0 +1,62 @@
+.donut-chart {
+  width: 12rem;
+  height: 12rem;
+  border: 4px solid #e75735;
+  border-radius: 50%;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: #9d9d9d;
+}
+
+.donut-segment {
+  stroke-dasharray: 0 100;
+  stroke-dashoffset: 25;
+}
+
+.chart-animation {
+  animation: moveP 2s forwards;
+}
+
+@keyframes moveP {
+  to {
+    stroke-dasharray: 85 15;
+  }
+}
+
+.pie-chart {
+  position: relative;
+  &__svg {
+    transform: rotate(-90deg);
+  }
+  &__progress {
+    fill: none;
+    stroke-width: 4;
+    stroke-opacity: 0.3;
+    stroke-linecap: round;
+    stroke: #e75735;
+    &_path {
+
+    }
+    &_fill {
+      --initialStroke: 0;
+      --transitionDuration: 0;
+      stroke-opacity: 1;
+      stroke-dasharray: var(--initialStroke);
+      stroke-dashoffset: var(--initialStroke);
+      transition: stroke-dashoffset var(--transitionDuration) ease;
+    }
+  }
+  &__percent {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -26,12 +26,13 @@ module.exports = {
       {
         test: /\.m?js$/,
       exclude: /(node_modules|bower_components)/,
-      use: {
-        loader: 'babel-loader',
+      use: [
+        {loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env']
-      }
-    }
+      }},
+      'webpack-import-glob-loader'
+      ]
   },
     // {
     //   test: /\.(png|jpg|gif)$/,
@@ -95,16 +96,16 @@ module.exports = {
 
     }),
     new WebpackMd5Hash(),
-    new CopyWebpackPlugin([
-      {
-        from: './src/img',
-        to: './img'
-      },
-      {
-        from: './src/fonts',
-        to: './fonts'
-      }
+    // new CopyWebpackPlugin([
+    //   {
+    //     from: './src/img',
+    //     to: './img'
+    //   },
+    //   {
+    //     from: './src/fonts',
+    //     to: './fonts'
+    //   }
 
-    ]),
+    // ]),
   ]
 };
